@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="735.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brief3javafx.controller.NewClientController">
+    <children>
+        <Label layoutX="353.0" layoutY="21.0" text="Add new client" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="43.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#0231e0" />
+                        <Stop color="#1b9e58" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Label layoutX="84.0" layoutY="81.0" text="Badge number*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="85.0" layoutY="161.0" text="Compagny*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="84.0" layoutY="244.0" text="Start date*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="517.0" layoutY="82.0" text="First name*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="518.0" layoutY="164.0" text="Last name*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="date" layoutX="84.0" layoutY="271.0" prefHeight="50.0" prefWidth="386.0" />
+        <TextField fx:id="badge" alignment="CENTER" layoutX="84.0" layoutY="111.0" prefHeight="43.0" prefWidth="386.0" />
+        <Label layoutX="85.0" layoutY="338.0" text="Adress*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="adress" layoutX="85.0" layoutY="366.0" prefHeight="148.0" prefWidth="396.0" />
+        <RadioButton layoutX="632.0" layoutY="433.0" mnemonicParsing="false" onAction="#radioButtonPass" selected="true" text="PASSPORT">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="choose" />
+         </toggleGroup>
+        </RadioButton>
+        <Label layoutX="524.0" layoutY="430.0" text="Choose*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <RadioButton layoutX="757.0" layoutY="433.0" mnemonicParsing="false" onAction="#radioButtonCin" text="CIN" toggleGroup="$choose">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </RadioButton>
+        <Button fx:id="add" defaultButton="true" layoutX="430.0" layoutY="543.0" mnemonicParsing="false" onAction="#addClients" prefHeight="11.0" prefWidth="147.0" text="Add" textFill="#5a9475">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <font>
+                <Font name="System Bold" size="23.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Button layoutX="597.0" layoutY="543.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="147.0" text="Clear" textFill="WHITE">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <font>
+                <Font name="System Bold" size="23.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Label layoutX="518.0" layoutY="248.0" text="Phone*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <ComboBox layoutX="518.0" layoutY="274.0" prefHeight="43.0" prefWidth="88.0" />
+        <TextField fx:id="number" layoutX="603.0" layoutY="274.0" prefHeight="43.0" prefWidth="299.0">
+            <opaqueInsets>
+                <Insets left="-1.0" />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="firdtname" alignment="CENTER" layoutX="518.0" layoutY="111.0" prefHeight="43.0" prefWidth="386.0" />
+        <TextField fx:id="compagny" alignment="CENTER" layoutX="85.0" layoutY="191.0" prefHeight="43.0" prefWidth="386.0" />
+        <TextField fx:id="lastname" alignment="CENTER" layoutX="517.0" layoutY="191.0" prefHeight="43.0" prefWidth="386.0" />
+        <Label layoutX="518.0" layoutY="339.0" text="Email*">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="email" alignment="CENTER" layoutX="518.0" layoutY="366.0" prefHeight="43.0" prefWidth="386.0" />
+        <Button defaultButton="true" layoutX="262.0" layoutY="543.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="147.0" text="List clients" textFill="#201ad0">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <font>
+                <Font name="System Bold" size="23.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+      <TextField fx:id="cin" alignment="CENTER" layoutX="525.0" layoutY="464.0" prefHeight="43.0" prefWidth="386.0" promptText="CIN" visible="false" />
+      <TextField fx:id="passport" alignment="CENTER" layoutX="525.0" layoutY="464.0" prefHeight="43.0" prefWidth="386.0" promptText="PASSPORT" />
+      <Label fx:id="regexBadge" layoutX="369.0" layoutY="154.0" text="10 charactères*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexCompagny" layoutX="345.0" layoutY="234.0" text="Max50 charactères*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexDate" layoutX="402.0" layoutY="329.0" text="Required*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexAdress" layoutX="409.0" layoutY="514.0" text="Required*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexCompagny1" layoutX="768.0" layoutY="154.0" text="Max50 charactères*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexLastName" layoutX="768.0" layoutY="238.0" text="Max50 charactères*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexPhone" layoutX="803.0" layoutY="319.0" text="Format Invalid*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexEmail" layoutX="803.0" layoutY="409.0" text="Format Invalid*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="regexEmail1" layoutX="811.0" layoutY="514.0" text="Format Invalid*" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
