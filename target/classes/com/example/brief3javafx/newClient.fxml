@@ -101,13 +101,13 @@
                 <Font name="System Italic" size="18.0" />
             </font>
         </Label>
-        <ComboBox layoutX="518.0" layoutY="274.0" prefHeight="43.0" prefWidth="88.0" />
-        <TextField fx:id="number" layoutX="603.0" layoutY="274.0" prefHeight="43.0" prefWidth="299.0">
+        <ComboBox fx:id="dropdown" layoutX="518.0" layoutY="274.0" prefHeight="43.0" prefWidth="101.0" promptText="Select" />
+        <TextField fx:id="number" layoutX="612.0" layoutY="274.0" prefHeight="43.0" prefWidth="290.0">
             <opaqueInsets>
                 <Insets left="-1.0" />
             </opaqueInsets>
         </TextField>
-        <TextField fx:id="firdtname" alignment="CENTER" layoutX="518.0" layoutY="111.0" prefHeight="43.0" prefWidth="386.0" />
+        <TextField fx:id="firstName" alignment="CENTER" layoutX="518.0" layoutY="111.0" prefHeight="43.0" prefWidth="386.0" />
         <TextField fx:id="compagny" alignment="CENTER" layoutX="85.0" layoutY="191.0" prefHeight="43.0" prefWidth="386.0" />
         <TextField fx:id="lastname" alignment="CENTER" layoutX="517.0" layoutY="191.0" prefHeight="43.0" prefWidth="386.0" />
         <Label layoutX="518.0" layoutY="339.0" text="Email*">
@@ -116,7 +116,7 @@
             </font>
         </Label>
         <TextField fx:id="email" alignment="CENTER" layoutX="518.0" layoutY="366.0" prefHeight="43.0" prefWidth="386.0" />
-        <Button defaultButton="true" layoutX="262.0" layoutY="543.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="147.0" text="List clients" textFill="#201ad0">
+        <Button defaultButton="true" layoutX="262.0" layoutY="543.0" mnemonicParsing="false" onAction="#buttonListClients" prefHeight="33.0" prefWidth="147.0" text="List clients" textFill="#201ad0">
             <effect>
                 <ColorAdjust />
             </effect>
@@ -149,7 +149,7 @@
             <Font name="System Italic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="regexCompagny1" layoutX="768.0" layoutY="154.0" text="Max50 charactères*" textFill="RED" visible="false">
+      <Label fx:id="regexFirstName" layoutX="768.0" layoutY="154.0" text="Max50 charactères*" textFill="RED" visible="false">
          <font>
             <Font name="System Italic" size="15.0" />
          </font>
@@ -169,9 +169,14 @@
             <Font name="System Italic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="regexEmail1" layoutX="811.0" layoutY="514.0" text="Format Invalid*" textFill="RED" visible="false">
+      <Label fx:id="regexPassport" layoutX="811.0" layoutY="514.0" text="Format Invalid*" textFill="RED" visible="false">
          <font>
             <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="Succes" layoutX="438.0" layoutY="603.0" text="Invalide" textFill="#10da10" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="46.0" />
          </font>
       </Label>
     </children>

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="939.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brief3javafx.controller.LoginController">
-    <top>
+   <bottom>
         <AnchorPane prefHeight="618.0" prefWidth="662.0" BorderPane.alignment="CENTER">
             <cursor>
                 <Cursor fx:constant="DEFAULT" />
@@ -67,13 +67,18 @@
                         <Image url="@../../../img/login.png" />
                     </image>
                 </ImageView>
-            <Label id="mailalert" fx:id="emailalert" layoutX="386.0" layoutY="272.0" text="Invalide email format*" textFill="#f80000" visible="false" />
+            <Label id="mailalert" fx:id="emailalert" layoutX="386.0" layoutY="272.0" text="*Invalide email format" textFill="#f80000" visible="false" />
             <Label id="passwordalert" fx:id="passwordalert" layoutX="387.0" layoutY="436.0" text="*Required" textFill="#f80000" visible="false">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
+            <Label fx:id="invalideLabel" layoutX="514.0" layoutY="542.0" prefHeight="66.0" prefWidth="264.0" text="INVALIDE" textFill="#ff0909" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="45.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
-    </top>
+   </bottom>
 </BorderPane>

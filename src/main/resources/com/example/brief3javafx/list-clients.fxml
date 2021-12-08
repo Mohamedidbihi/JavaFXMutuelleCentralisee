@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="673.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brief3javafx.controller.ListClientsController">
+   <children>
+      <TableView fx:id="tableclients" layoutX="32.0" layoutY="88.0" prefHeight="405.0" prefWidth="933.0">
+        <columns>
+          <TableColumn fx:id="badge" prefWidth="76.0" text="N°Badge" />
+          <TableColumn fx:id="compagny" prefWidth="84.0" text="Compagny" />
+            <TableColumn fx:id="firstname" prefWidth="105.0" text="FirstName" />
+            <TableColumn fx:id="lastname" prefWidth="88.0" text="LastName " />
+            <TableColumn prefWidth="218.0" text="Phone">
+               <columns>
+                  <TableColumn fx:id="code" prefWidth="55.0" text="Code " />
+                  <TableColumn fx:id="phone" prefWidth="87.0" text="Number" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="startdate" prefWidth="96.0" text="Start Date" />
+            <TableColumn fx:id="passport" prefWidth="90.0" text="Passport" />
+            <TableColumn fx:id="cin" prefWidth="71.0" text="Cin" />
+            <TableColumn fx:id="email" prefWidth="82.0" text="Email" />
+            <TableColumn fx:id="adresse" prefWidth="101.0" text="Adresse" />
+        </columns>
+      </TableView>
+      <Label layoutX="431.0" layoutY="8.0" text="List clients" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0231e0" />
+                  <Stop color="#1b9e58" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="153.0" layoutY="520.0" mnemonicParsing="false" onAction="#buttonNewClient" text="+ New client" />
+      <Button layoutX="287.0" layoutY="520.0" mnemonicParsing="false" onAction="#buttonClose" text="Close" />
+   </children>
+</AnchorPane>
